@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="stil.css">
+</head>
+<body>
+
+<h1>TO DO LIST</H1>
+
+<table>
+<tr><td><input placeholder="" id="newtask"></td><td><button type="button" onclick="addnewtask()">+</button></td></tr>
+</table>
+
+<hr>
+
+<script>
+
+var tasks = [];
+
+function addnewtask() {
+
+var newtask = document.getElementById("newtask").value;
+ 
+if ( newtask == "" ) {
+
+    alert("Please fill in the blanks.");
+
+}
+
+else {
+
+tasks.push(newtask);
+
+var newdiv = document.createElement("div");
+
+newdiv.innerHTML = newtask;
+
+document.body.appendChild(newdiv);
+
+}
+
+}
+
+
+
+</script>
+</body>
+</html>
